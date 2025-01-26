@@ -8,7 +8,7 @@ $phpVersion = phpversion();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Version Info</title>
+    <title>Silly Development - Nginx</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -94,7 +94,7 @@ $phpVersion = phpversion();
     <div class="php-version"><?php echo $phpVersion; ?></div>
     <div class="message">Webserver correctly installed and running!</div>
     <div class="footer">
-        <p>Powered by <a href="https://sigmaprods.dev" target="_blank">sigmaprods.dev</a></p>
+        <p>Powered by <a href="https://sillydev.co.uk" target="_blank">Silly Development</a></p>
     </div>
 </div>
 
