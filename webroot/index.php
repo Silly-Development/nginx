@@ -1,102 +1,35 @@
 <?php
-// Get the PHP version
 $phpVersion = phpversion();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silly Development - Nginx</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f7fc;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
         }
-
-        .container {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            text-align: center;
-            width: 80%;
-            max-width: 600px;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.2em;
-            color: #34495e;
-            margin-bottom: 30px;
-        }
-
-        .php-version {
-            background-color: #2980b9;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-
-        .message {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #27ae60;
-            margin-bottom: 30px;
-        }
-
-        .footer {
-            font-size: 1em;
-            color: #7f8c8d;
-        }
-
-        .footer a {
-            color: #2980b9;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 2em;
-            }
-            p {
-                font-size: 1em;
-            }
-        }
-    </style>
+    </script>
 </head>
-<body>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex items-center justify-center">
 
-<div class="container">
-    <h1>Webserver Correctly Installed</h1>
-    <p>Your current PHP version is:</p>
-    <div class="php-version"><?php echo $phpVersion; ?></div>
-    <div class="message">Webserver correctly installed and running!</div>
-    <div class="footer">
-        <p>Powered by <a href="https://sillydev.co.uk" target="_blank">Silly Development</a></p>
+    <div class="bg-gray-800 rounded-xl shadow-xl p-8 max-w-xl w-full text-center">
+        <h1 class="text-3xl font-bold text-white mb-4">Webserver Correctly Installed</h1>
+        <p class="text-lg text-gray-300 mb-6">Your current PHP version is:</p>
+        <div class="bg-blue-600 text-white text-xl py-2 px-4 rounded mb-6 inline-block">
+            <?php echo $phpVersion; ?>
+        </div>
+        <div class="text-green-400 text-lg font-semibold mb-6">
+            Webserver correctly installed and running!
+        </div>
+        <footer class="text-sm text-gray-400">
+            Powered by <a href="https://sillydev.co.uk" target="_blank" class="text-blue-400 hover:underline">Silly Development</a>
+        </footer>
     </div>
-</div>
 
 </body>
 </html>
