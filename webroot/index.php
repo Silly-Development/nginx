@@ -7,7 +7,7 @@ $phpVersion = phpversion();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silly Development - Nginx</title>
+    <title>Bytevora - Nginx</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -34,7 +34,7 @@ $phpVersion = phpversion();
         </div>
 
         <footer class="text-sm text-gray-400 pt-4">
-            Powered by <a href="https://sillydev.co.uk" target="_blank" class="text-blue-400 hover:underline">Silly Development</a>
+            Powered by <a href="https://bytevora.co.uk" target="_blank" class="text-blue-400 hover:underline">Bytevora</a>
         </footer>
     </div>
 
