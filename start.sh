@@ -13,14 +13,6 @@ rm -rf /home/container/tmp/*
 mkdir -p /home/container/tmp
 log_success "tmp directory cleaned and recreated"
 
-if id nginx >/dev/null 2>&1; then
-    chown -R nginx:nginx /home/container/tmp
-    chmod 770 /home/container/tmp
-    log_success "tmp folder ownership/permissions set for nginx"
-else
-    log_warning "nginx user not found, skipping folder ownership"
-fi
-
 echo "⏳ Starting PHP-FPM..."
 /usr/sbin/php-fpm8 --fpm-config /home/container/php-fpm/php-fpm.conf --daemonize || { log_error "PHP-FPM failed"; exit 1; }
 log_success "PHP-FPM started"
